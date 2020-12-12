@@ -65,8 +65,8 @@ export class FormularioRegistroProductoComponent implements OnInit {
   crear_producto(): void {
     const producto = new Producto(
       this.nombre.value, this.marca.value, this.nit_prov.value,
-      this.logo_prod.value, this.descripcion_prod.value,
-      this.imagen_prod.value,this.beneficios_prod.value, 
+      this.logo_prod.value, this.imagen_prod.value, 
+      this.descripcion_prod.value,this.beneficios_prod.value, 
       this.precio_prod.value, this.cantidad_ex_prod.value, 
       this.peso_prod.value, this.peso_unidad.value, 
       this.ancho_prod.value,this.perfil_prod.value, 

@@ -14,8 +14,8 @@ export class FormularioRegistroProductoComponent implements OnInit {
 
   usuarioPattern: any = /^[a-zA-Z0-9\_\-]{8,16}$/;
   nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-  descripcion_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{1,180}$/;
-  beneficios_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{1,180}$/;
+  descripcion_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,300}$/;
+  beneficios_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,300}$/;
   apellidoPattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
   cedulaPattern: any = /^\d{1,10}$/;
   passwordPattern: any = /^.{8,18}$/;

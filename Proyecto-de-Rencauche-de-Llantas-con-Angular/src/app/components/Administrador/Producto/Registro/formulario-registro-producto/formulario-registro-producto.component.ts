@@ -13,7 +13,7 @@ import { ProductoService } from 'src/app/Service/Producto.service';
 export class FormularioRegistroProductoComponent implements OnInit {
 
   usuarioPattern: any = /^[a-zA-Z0-9\_\-]{8,16}$/;
-  nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+  nombrePattern: any = /^[a-zA-Z0-9À-ÿ\s]{1,40}$/;
   descripcion_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,300}$/;
   beneficios_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,300}$/;
   apellidoPattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;

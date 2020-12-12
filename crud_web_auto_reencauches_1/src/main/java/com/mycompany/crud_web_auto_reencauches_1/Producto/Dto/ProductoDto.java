@@ -24,6 +24,9 @@ public class ProductoDto {
 
     @NotBlank
     private String logo_prod;
+    
+    @NotBlank
+    private String imagen_prod;
 
     @NotBlank
     private String descripcion_prod;
@@ -67,11 +70,12 @@ public class ProductoDto {
     public ProductoDto() {
     }
 
-    public ProductoDto(String nombre_prod, String marca_prod, String nit_prov, String logo_prod, String descripcion_prod, String beneficios_prod, long precio_prod, int cantidad_ex_prod, int peso_prod, String peso_unidad, int ancho_prod, int perfil_prod, double rin_prod, String eje_prod, String terreno_prod, String tipo_prod, String vehiculo) {
+    public ProductoDto(String nombre_prod, String marca_prod, String nit_prov, String logo_prod,String imagen_prod,String descripcion_prod, String beneficios_prod, long precio_prod, int cantidad_ex_prod, int peso_prod, String peso_unidad, int ancho_prod, int perfil_prod, double rin_prod, String eje_prod, String terreno_prod, String tipo_prod, String vehiculo) {
         this.nombre_prod = nombre_prod;
         this.marca_prod = marca_prod;
         this.nit_prov = nit_prov;
         this.logo_prod = logo_prod;
+        this.imagen_prod = imagen_prod;
         this.descripcion_prod = descripcion_prod;
         this.beneficios_prod = beneficios_prod;
         this.precio_prod = precio_prod;
@@ -118,6 +122,16 @@ public class ProductoDto {
     public void setLogo_prod(String logo_prod) {
         this.logo_prod = logo_prod;
     }
+
+    public String getImagen_prod() {
+        return imagen_prod;
+    }
+
+    public void setImagen_prod(String imagen_prod) {
+        this.imagen_prod = imagen_prod;
+    }
+    
+    
 
     public String getDescripcion_prod() {
         return descripcion_prod;

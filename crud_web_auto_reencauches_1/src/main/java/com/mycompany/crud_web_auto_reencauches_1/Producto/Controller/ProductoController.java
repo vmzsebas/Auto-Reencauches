@@ -49,6 +49,8 @@ public class ProductoController {
             return new ResponseEntity(new Mensaje("El nit del proveedor es necesario."), HttpStatus.BAD_REQUEST);
         } else if (StringUtils.isBlank(productoDto.getLogo_prod())) {
             return new ResponseEntity(new Mensaje("El logo del producto es necesario."), HttpStatus.BAD_REQUEST);
+        } else if (StringUtils.isBlank(productoDto.getImagen_prod())) {
+            return new ResponseEntity(new Mensaje("La imagen del producto es necesario."), HttpStatus.BAD_REQUEST);
         } else if (StringUtils.isBlank(productoDto.getDescripcion_prod())) {
             return new ResponseEntity(new Mensaje("La descripcion del producto es necesaria."), HttpStatus.BAD_REQUEST);
         } else if (StringUtils.isBlank(productoDto.getBeneficios_prod())) {
@@ -77,8 +79,8 @@ public class ProductoController {
             return new ResponseEntity(new Mensaje("EL campo vehiculo del producto es necesario."), HttpStatus.BAD_REQUEST);
         }
         Producto producto = new Producto(productoDto.getNombre_prod(), productoDto.getMarca_prod(), productoDto.getNit_prov(), productoDto.getLogo_prod(),
-                productoDto.getDescripcion_prod(), productoDto.getBeneficios_prod(), productoDto.getPrecio_prod(), productoDto.getCantidad_ex_prod(),
-                productoDto.getPeso_prod(), productoDto.getPeso_unidad(), productoDto.getAncho_prod(), productoDto.getPerfil_prod(),
+                productoDto.getImagen_prod(), productoDto.getDescripcion_prod(), productoDto.getBeneficios_prod(), productoDto.getPrecio_prod(),
+                productoDto.getCantidad_ex_prod(), productoDto.getPeso_prod(), productoDto.getPeso_unidad(), productoDto.getAncho_prod(), productoDto.getPerfil_prod(),
                 productoDto.getRin_prod(), productoDto.getEje_prod(), productoDto.getTerreno_prod(), productoDto.getTipo_prod(), productoDto.getVehiculo());
         productoService.save(producto);
         return new ResponseEntity(new Mensaje("El registro se ha realizado con exito"), HttpStatus.OK);

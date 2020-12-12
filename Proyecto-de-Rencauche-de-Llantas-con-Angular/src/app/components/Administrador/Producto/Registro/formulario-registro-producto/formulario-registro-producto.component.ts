@@ -97,7 +97,27 @@ export class FormularioRegistroProductoComponent implements OnInit {
   }
 
   reserField(): void {
-    
+    this.registroForm.get('nombre').reset();
+
+    this.registroForm.get('marca').reset();
+
+    this.registroForm.get('nit_prov').reset();
+    this.registroForm.get('descripcion_prod').reset();
+    this.registroForm.get('beneficios_prod').reset();
+    this.registroForm.get("logo_prod").reset();
+    this.registroForm.get("precio_prod").reset();
+    this.registroForm.get("cantidad_ex_prod").reset();
+    this.registroForm.get("peso_prod").reset();
+    this.registroForm.get("peso_unidad").reset();
+    this.registroForm.get("ancho_prod").reset();
+    this.registroForm.get("perfil_prod").reset();
+    this.registroForm.get("rin_prod").reset();
+
+    this.registroForm.get("eje_prod").reset();
+
+    this.registroForm.get("terreno_prod").reset();
+    this.registroForm.get("tipo_prod").reset();
+    this.registroForm.get("vehiculo").reset();
   }
 
   onRegistrar() {

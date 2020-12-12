@@ -42,6 +42,7 @@ export class FormularioRegistroProductoComponent implements OnInit {
     descripcion_prod: new FormControl('', [Validators.required, Validators.pattern(this.descripcion_prodPattern)]),
     beneficios_prod: new FormControl('', [Validators.required, Validators.pattern(this.beneficios_prodPattern)]),
     logo_prod: new FormControl('', [Validators.required]),
+    imagen_prod: new FormControl('', [Validators.required]),
     precio_prod: new FormControl('', [Validators.required, Validators.pattern(this.precio_prodPattern)]),
     cantidad_ex_prod: new FormControl('', [Validators.required, Validators.pattern(this.cantidad_ex_prodPattern)]),
     peso_prod: new FormControl('', [Validators.required, Validators.pattern(this.precio_prodPattern)]),
@@ -53,7 +54,7 @@ export class FormularioRegistroProductoComponent implements OnInit {
     terreno_prod: new FormControl('', [Validators.required, Validators.pattern(this.terreno_prodPattern)]),
     tipo_prod: new FormControl('', [Validators.required, Validators.pattern(this.tipo_prodPattern)]),
     vehiculo: new FormControl('', [Validators.required, Validators.pattern(this.vehiculoPattern)])
-    
+
   });
 
   validarMensaje() {
@@ -65,12 +66,13 @@ export class FormularioRegistroProductoComponent implements OnInit {
     const producto = new Producto(
       this.nombre.value, this.marca.value, this.nit_prov.value,
       this.logo_prod.value, this.descripcion_prod.value,
-      this.beneficios_prod.value, this.precio_prod.value,
-      this.cantidad_ex_prod.value, this.peso_prod.value,
-      this.peso_unidad.value, this.ancho_prod.value,
-      this.perfil_prod.value, this.rin_prod.value,
-      this.eje_prod.value, this.terreno_prod.value,
-      this.tipo_prod.value, this.vehiculo.value
+      this.imagen_prod.value,this.beneficios_prod.value, 
+      this.precio_prod.value, this.cantidad_ex_prod.value, 
+      this.peso_prod.value, this.peso_unidad.value, 
+      this.ancho_prod.value,this.perfil_prod.value, 
+      this.rin_prod.value, this.eje_prod.value, 
+      this.terreno_prod.value, this.tipo_prod.value, 
+      this.vehiculo.value
     );
 
     this.productoService.crear_producto(producto).subscribe(
@@ -150,6 +152,7 @@ export class FormularioRegistroProductoComponent implements OnInit {
   get descripcion_prod() { return this.registroForm.get('descripcion_prod') };
   get beneficios_prod() { return this.registroForm.get('beneficios_prod') };
   get logo_prod() { return this.registroForm.get("logo_prod") }
+  get imagen_prod() { return this.registroForm.get("imagen_prod") }
   get precio_prod() { return this.registroForm.get("precio_prod") }
   get cantidad_ex_prod() { return this.registroForm.get("cantidad_ex_prod") }
   get peso_prod() { return this.registroForm.get("peso_prod") }

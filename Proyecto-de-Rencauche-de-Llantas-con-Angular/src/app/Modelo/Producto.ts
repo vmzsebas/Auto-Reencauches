@@ -5,6 +5,7 @@ export class Producto {
     marca_prod: string;
     nit_prov: string;
     logo_prod: string;
+    imagen_prod: string;
     descripcion_prod: string;
     beneficios_prod: string;
     precio_prod: number;
@@ -23,6 +24,7 @@ export class Producto {
         marca_prod: string,
         nit_prov: string,
         logo_prod: string,
+        imagen_prod:string,
         descripcion_prod: string,
         beneficios_prod: string,
         precio_prod: number,
@@ -41,6 +43,7 @@ export class Producto {
         this.marca_prod = marca_prod;
         this.nit_prov = nit_prov;
         this.logo_prod = logo_prod;
+        this.imagen_prod = imagen_prod;
         this.descripcion_prod = descripcion_prod;
         this.beneficios_prod = beneficios_prod;
         this.precio_prod = precio_prod;

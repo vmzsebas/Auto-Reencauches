@@ -1,0 +1,26 @@
+<div class="grupo" id="grupo_apellido" [formGroup]="registroForm">
+    <div class="formulario_grupo-input">
+            <select class="form-select class-input" formControlName="vehiculo" id="seleccionItem" required>
+                <option selected></option>
+                <option *ngFor="let v of vehiculos" [ngValue]="v.name">{{v.name}}</option>
+            </select>
+        <label for="" class="formulario_label">Vehiculo</label>
+    </div>
+    <div class="" *ngIf="vehiculo.invalid && (vehiculo.dirty || vehiculo.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="vehiculo.errors.required">
+            <p class="formulario_input-error alert-danger">El campo vehiculo es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+        <div class="grupo-incorrecto"
+            *ngIf="vehiculo.invalid && (vehiculo.dirty || vehiculo.touched) && vehiculo.errors.pattern">
+            <p class="formulario_input-error alert-danger">El campo vehiculo solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(vehiculo.valid==true) && (vehiculo.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

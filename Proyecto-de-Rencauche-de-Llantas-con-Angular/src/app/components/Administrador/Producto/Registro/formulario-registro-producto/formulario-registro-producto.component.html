@@ -1,0 +1,65 @@
+<div id="idDiv">
+    <form [formGroup]="registroForm" (ngSubmit)="onRegistrar()" class="formulario" id="formulario">
+        <br />
+        <br />
+        <br />
+        <h4 class="formulario_h4-formulario-registro">FORMULARIO DE PRODUCTO</h4>
+
+        <app-formulario-grupo-nombre [registroForm]="registroForm" [nombre]="nombre"></app-formulario-grupo-nombre>
+        <app-formulario-grupo-marca-producto [registroForm]="registroForm" [marca]="marca">
+        </app-formulario-grupo-marca-producto>
+        <app-formulario-grupo-nit-prov-producto [registroForm]="registroForm" [nit_prov]="nit_prov">
+        </app-formulario-grupo-nit-prov-producto>
+        <app-formulario-grupo-logo-producto [registroForm]="registroForm" [logo_prod]="logo_prod">
+        </app-formulario-grupo-logo-producto>
+        <app-formulario-grupo-descripcion-producto [registroForm]="registroForm" [descripcion_prod]="descripcion_prod">
+        </app-formulario-grupo-descripcion-producto>
+        <app-formulario-grupo-beneficios-producto [registroForm]="registroForm" [beneficios_prod]="beneficios_prod">
+        </app-formulario-grupo-beneficios-producto>
+        <app-formulario-grupo-precio-producto [registroForm]="registroForm" [precio_prod]="precio_prod">
+        </app-formulario-grupo-precio-producto>
+        <app-formulario-grupo-cantidad-ex-producto [registroForm]="registroForm" [cantidad_ex_prod]="cantidad_ex_prod">
+        </app-formulario-grupo-cantidad-ex-producto>
+        <app-formulario-grupo-peso-producto [registroForm]="registroForm" [peso_prod]="peso_prod">
+        </app-formulario-grupo-peso-producto>
+        <app-formulario-grupo-peso-unidad-producto [registroForm]="registroForm" [peso_unidad]="peso_unidad">
+        </app-formulario-grupo-peso-unidad-producto>
+        <app-formulario-grupo-ancho-producto [registroForm]="registroForm" [ancho_prod]="ancho_prod">
+        </app-formulario-grupo-ancho-producto>
+        <app-formulario-grupo-pefil-producto [registroForm]="registroForm" [perfil_prod]="perfil_prod">
+        </app-formulario-grupo-pefil-producto>
+        <app-formulario-grupo-rin-producto [registroForm]="registroForm" [rin_prod]="rin_prod">
+        </app-formulario-grupo-rin-producto>
+        <app-formulario-grupo-eje-producto [registroForm]="registroForm" [eje_prod]="eje_prod">
+        </app-formulario-grupo-eje-producto>
+        <app-formulario-grupo-terreno-producto [registroForm]="registroForm" [terreno_prod]="terreno_prod">
+        </app-formulario-grupo-terreno-producto>
+        <app-formulario-grupo-tipo-producto [registroForm]="registroForm" [tipo_prod]="tipo_prod">
+        </app-formulario-grupo-tipo-producto>
+        <app-formulario-grupo-vehiculo-producto [registroForm]="registroForm" [vehiculo]="vehiculo"></app-formulario-grupo-vehiculo-producto>
+        <!--<app-formulario-grupo-apellido [registroForm]="registroForm" [apellido]="apellido"></app-formulario-grupo-apellido>
+        <app-formulario-grupo-cedula [registroForm]="registroForm" [cedula]="cedula"></app-formulario-grupo-cedula>
+        <app-formulario-grupo-telefono [registroForm]="registroForm" [telefono]="telefono"></app-formulario-grupo-telefono>
+        <app-formulario-grupo-email [registroForm]="registroForm" [email]="email"></app-formulario-grupo-email>
+        <app-formulario-grupo-usuario [registroForm]="registroForm" [usuario]="usuario"></app-formulario-grupo-usuario>
+        <app-formulario-grupo-password [registroForm]="registroForm" [password]="password"></app-formulario-grupo-password>
+        <app-formulario-grupo-repeat-password [registroForm]="registroForm" [repeat_password]="repeat_password" [password]="password"></app-formulario-grupo-repeat-password>-->
+
+        <!--div class="grupo grupo_terminos-condiciones" id="grupo_terminos-condiciones">
+            <input class="formulario-checkbox" type="checkbox" name="termino-condiciones" id="termino-condiciones">
+            <label class="formulario_label-terminos-condiciones">Acepto los Terminos y Condiciones</label>
+        </div-->
+        <div class="grupo formulario-mensaje" id="formulario-mensaje" *ngIf="validarMensaje() === 'FALSE'">
+            <p><i class="fas fa-exclamation-triangle"></i><b> Error:</b>
+                {{mensajeV}}</p>
+        </div>
+        <div class="grupo formulario-mensaje-exitoso" id="formulario-mensaje" *ngIf="validarMensaje() === 'TRUE'">
+            <p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">{{mensajeV}}</p>
+        </div>
+        <div class="grupo formulario_grupo-btn-enviar">
+            <!--p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">Formulario Enviado Exitosamente!</p-->
+            <button class="class-button-registrar" type="submit">Resgistrar</button>
+            <!--<button class="class-button-login" type="submit">Iniciar Sesion</button>-->
+        </div>
+    </form>
+</div>

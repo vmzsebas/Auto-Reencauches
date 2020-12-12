@@ -1,0 +1,17 @@
+<div class="class-app-menu">
+  <app-menu [Vmain]="Vmain"></app-menu>
+  <div class="container">
+    <br>
+    <h3 id="TipoMenu" class="nav-link">{{Vmain.tipoMenu}}</h3>
+    <p id="idHome" class="nav-link" [innerHTML]="tipoMenuSelHtml()"></p>
+    <hr class="hr" align="left">
+
+    <router-outlet></router-outlet>
+
+    <br>
+
+  </div>
+  <br>
+  <br>
+  <app-footer></app-footer>
+</div>

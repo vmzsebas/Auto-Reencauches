@@ -1,0 +1,30 @@
+<div id="idDiv">
+    <form [formGroup]="registroForm" (ngSubmit)="onUpdate()" class="formulario" id="formulario">
+        <div class="f-window">
+            <i class="fas fa-window-close f-close" type="btn" (click)="cerrarFormulario()"></i>
+        </div>
+        <br />
+        <h4 class="formulario_h4-formulario-registro">ACTUALIZAR PROVEEDOR</h4>
+
+        <app-formulario-grupo-nit [registroForm]="registroForm" [nit]="nit"></app-formulario-grupo-nit>
+        <app-formulario-grupo-nombre [registroForm]="registroForm" [nombre]="nombre"></app-formulario-grupo-nombre>
+        <app-formulario-grupo-telefono [registroForm]="registroForm" [telefono]="telefono">
+        </app-formulario-grupo-telefono>
+        <app-formulario-grupo-direccion [registroForm]="registroForm" [direccion]="direccion">
+        </app-formulario-grupo-direccion>
+
+
+        <div class="grupo formulario-mensaje" id="formulario-mensaje" *ngIf="validarMensaje() === 'FALSE'">
+            <p><i class="fas fa-exclamation-triangle"></i><b> Error:</b>
+                {{mensajeV}}</p>
+        </div>
+        <div class="grupo formulario-mensaje-exitoso" id="formulario-mensaje" *ngIf="validarMensaje() === 'TRUE'">
+            <p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">{{mensajeV}}</p>
+        </div>
+        <div class="grupo formulario_grupo-btn-enviar">
+            <!--p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">Formulario Enviado Exitosamente!</p-->
+            <button class="class-button-registrar" type="submit">Actualizar</button>
+            <!--<button class="class-button-login" type="submit">Iniciar Sesion</button>-->
+        </div>
+    </form>
+</div>

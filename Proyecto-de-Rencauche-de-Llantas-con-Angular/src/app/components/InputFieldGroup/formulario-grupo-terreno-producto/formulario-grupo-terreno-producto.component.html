@@ -1,0 +1,26 @@
+<div class="grupo" id="grupo_apellido" [formGroup]="registroForm">
+    <div class="formulario_grupo-input">
+            <select class="form-select class-input" formControlName="terreno_prod" id="seleccionItem" required>
+                <option selected></option>
+                <option *ngFor="let t of terrenos" [ngValue]="t.name">{{t.name}}</option>
+            </select>
+        <label for="" class="formulario_label">Terreno</label>
+    </div>
+    <div class="" *ngIf="terreno_prod.invalid && (terreno_prod.dirty || terreno_prod.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="terreno_prod.errors.required">
+            <p class="formulario_input-error alert-danger">El campo terreno es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+        <div class="grupo-incorrecto"
+            *ngIf="terreno_prod.invalid && (terreno_prod.dirty || terreno_prod.touched) && terreno_prod.errors.pattern">
+            <p class="formulario_input-error alert-danger">El campo terreno solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(terreno_prod.valid==true) && (terreno_prod.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

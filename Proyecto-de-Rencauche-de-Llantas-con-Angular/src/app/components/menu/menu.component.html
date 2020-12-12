@@ -1,0 +1,80 @@
+<header class="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light borderMenu">
+            <button id="idButtonToggler" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span id="glyphiconList" class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+            </button>
+
+            <a class="nav-link navbar-expand-md" id="navbarImg"
+                (click)='Vmain.tipoMenu="INICIO"; Vmain.tipoSubMenu="INICIO";inicio();'>
+                <img src="../../../assets/img/llanta_2.jpeg" width="140" height="55" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar navbar-nav">
+                    <li>
+                        <a class="nav-link"  (click)='Vmain.tipoMenu="INICIO"; Vmain.tipoSubMenu="INICIO"; inicio();'
+                            style="margin-top: 1;">
+                            <span id="idIconHome" class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            <i id="idNavLinkRegistrar">INICIO</i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" 
+                            (click)='Vmain.tipoMenu="TIENDA"; Vmain.tipoSubMenu="TIENDA"; tienda();'>
+                            <!--<img id="idImgTienda" class="imagenTienda" type="image/png"
+                                style="margin-bottom: 0.3rem;margin-left: 0.4rem;"-->
+                            <span id="idIconTienda" class="fas fa-store" aria-hidden="true" style="margin-left: 0.4rem;"></span>
+                            <i id="idNavLinkRegistrar">TIENDA</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link"  
+                            (click)='Vmain.tipoMenu="ACERCA DE NOSOTROS"; Vmain.tipoSubMenu="ACERCA DE NOSOTROS"; aboutUs();'>
+                            <!--<img id="idImgSobreNosotros" class="imagenSobreNosotros" type="image/png"
+                                style="margin-bottom: 0.3rem;margin-left: 0.4rem;">-->
+                            <span id="idIconSobreNosotros" class="fas fa-users" aria-hidden="true" style="margin-left: 0.4rem;"></span>
+                            <i id="idNavLinkRegistrar">ACERCA DE NOSOTROS</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="idNavLink1" class="nav-link"  
+                            (click)='Vmain.tipoMenu="CONTACTENOS"; Vmain.tipoSubMenu="CONTACTENOS"; contactenos()'>
+                            <span id="idIconContactenos" class="glyphicon glyphicon-earphone" aria-hidden="true"
+                                style="margin-left: 0.4rem;"></span>
+                            <i id="idNavLinkRegistrar">CONTACTENOS</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar navbar-right navbar-nav">
+                    <br>
+                    <li>
+                        <a id="idNavLink" class="nav-link" (click)='Vmain.tipoMenu="REGISTRAR"; Vmain.tipoSubMenu="REGISTRAR";formRegistrar();'>
+                            <span id="idIconRegistrar" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <i id="idNavLinkRegistrar">REGISTRAR</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="idNavLink1" class="nav-link" (click)='Vmain.tipoMenu="INICIAR SESION"; Vmain.tipoSubMenu="INICIAR SESION";formLogin();'>
+                            <span id="idIconLogin" class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                            <i id="idNavLinkLogin">INICIAR SESION</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="idNavLink1" class="nav-link"
+                            (click)='Vmain.tipoMenu="CARRITO"; Vmain.tipoSubMenu="CARRITO"'>
+                            <span id="idIconCarrito" class="glyphicon glyphicon-shopping-cart"
+                                aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+</header>

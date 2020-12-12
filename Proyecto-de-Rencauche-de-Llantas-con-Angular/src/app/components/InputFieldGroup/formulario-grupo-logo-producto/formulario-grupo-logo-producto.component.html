@@ -1,0 +1,24 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <input class="class-input-logo" type="file" formControlName="logo_prod" (change)="fileInput($event.target.files)"
+            id="logo_prod" required><span class="barra"></span>
+        <label for="" class="formulario_label_logo">Logo</label>
+    </div>
+    <div class="" *ngIf="logo_prod.invalid && (logo_prod.dirty || logo_prod.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="logo_prod.errors.required">
+            <p class="formulario_input-error alert-danger">El logo es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="logo_prod.invalid && (logo_prod.dirty || logo_prod.touched) && logo_prod.errors.pattern">
+            <p class="formulario_input-error alert-danger">El logo solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(logo_prod.valid==true) && (logo_prod.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

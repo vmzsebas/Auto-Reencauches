@@ -1,0 +1,28 @@
+<div class="grupo" id="grupo_usuario" [formGroup]="loginForm">
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="usuario" id="usuario" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Usuario</label>
+        <!--i class="formulario_validacion-estado fas fa-times-circle"></i-->
+        <div class="" *ngIf="usuario.invalid && (usuario.dirty || usuario.touched)">
+
+            <div class="formulario_grupo-input grupo-incorrecto" *ngIf="usuario.errors.required">
+                <p class="formulario_input-error alert-danger">El usuario es requerido.</p>
+                <i class="formulario_validacion-estado fas fa-times-circle"></i>
+            </div>
+            <div class="formulario_grupo-input grupo-incorrecto"
+                *ngIf="usuario.invalid && (usuario.dirty || usuario.touched) && usuario.errors.pattern">
+                <p class="formulario_input-error alert-danger">El usuario tiene que ser de 8 a 16 digitos y solo
+                    <br> puede contener
+                    numeros, letras y guion bajo.</p>
+                <i class="formulario_validacion-estado fas fa-times-circle"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="grupo-correcto" *ngIf="(usuario.valid==true) && (usuario.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

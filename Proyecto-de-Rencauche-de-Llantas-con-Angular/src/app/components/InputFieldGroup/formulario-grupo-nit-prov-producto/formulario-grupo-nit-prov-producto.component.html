@@ -1,0 +1,24 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <!--<input class="class-input" type="text" formControlName="marca" id="marca" required><span class="barra"></span>
+        <label for="" class="formulario_label">Marca</label>-->
+        <select class="form-select class-input" formControlName="nit_prov" id="seleccionItem" required>
+            <option selected></option>
+            <option *ngFor="let p of Vprov.proveedores" [ngValue]="p.nit">{{p.nit}} - {{p.nombre}}</option>
+        </select>
+        <label for="" class="formulario_label">Seleccione el proveedor</label>
+    </div>
+
+    <div class="" *ngIf="nit_prov.invalid && (nit_prov.dirty || nit_prov.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="nit_prov.errors.required || nit_prov.value==''">
+            <p class="formulario_input-error alert-danger">El campo proveedor es requerido</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(nit_prov.valid==true) && (nit_prov.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

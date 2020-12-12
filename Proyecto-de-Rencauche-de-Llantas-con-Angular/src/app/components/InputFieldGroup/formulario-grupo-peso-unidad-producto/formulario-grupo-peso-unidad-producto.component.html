@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="peso_unidad" id="peso_unidad" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Unidad Peso</label>
+    </div>
+    <div class="" *ngIf="peso_unidad.invalid && (peso_unidad.dirty || peso_unidad.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="peso_unidad.errors.required">
+            <p class="formulario_input-error alert-danger">La unidad de peso es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="peso_unidad.invalid && (peso_unidad.dirty || peso_unidad.touched) && peso_unidad.errors.pattern">
+            <p class="formulario_input-error alert-danger">La unidad de peso solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(peso_unidad.valid==true) && (peso_unidad.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

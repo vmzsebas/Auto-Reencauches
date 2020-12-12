@@ -1,0 +1,35 @@
+<div id="idDiv">
+    <form [formGroup]="loginForm" (ngSubmit)="onSesion()" class="formulario" id="formulario">
+        <br />
+        <br />
+        <br />
+        <h4 class="formulario_h4-formulario-registro">FORMULARIO DE INICIAR SESION</h4>
+        
+        <app-formulario-grupo-login-usuario [loginForm]="loginForm" [usuario]="usuario"></app-formulario-grupo-login-usuario>
+        <app-formulario-grupo-login-password [loginForm]="loginForm" [password]="password"></app-formulario-grupo-login-password>
+        
+        
+        
+   
+        <!--div class="grupo grupo_terminos-condiciones" id="grupo_terminos-condiciones">
+            <input class="formulario-checkbox" type="checkbox" name="termino-condiciones" id="termino-condiciones">
+            <label class="formulario_label-terminos-condiciones">Acepto los Terminos y Condiciones</label>
+        </div-->
+        <div class="grupo formulario-mensaje" id="formulario-mensaje" *ngIf="validarMensaje() === 'FALSE'">
+            <p><i class="fas fa-exclamation-triangle"></i><b> Error:</b>
+                {{mensajeV}}.</p>
+        </div>
+        <div class="grupo formulario-mensaje-exitoso" id="formulario-mensaje" *ngIf="validarMensaje() === 'TRUE'">
+            <p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">{{mensajeV}}</p>
+        </div>
+        <div class="grupo formulario_grupo-btn-enviar">
+            <!--p class="formulario_mensaje-exitoso" id="formulario_mensaje-exitoso">Formulario Enviado Exitosamente!</p-->
+            <button class="class-button-registrar" type="submit">Iniciar Sesion</button>
+            <!--<button class="class-button-login" type="submit">Iniciar Sesion</button>-->
+        </div>
+        
+        <div class="grupo formulario_login">
+            <p>¿Ya estas registrado?, ¿Deseas Registrarte? - <a [routerLink]="" (click)="formRegistrar()">Registrar</a></p>
+        </div>
+    </form>
+</div>

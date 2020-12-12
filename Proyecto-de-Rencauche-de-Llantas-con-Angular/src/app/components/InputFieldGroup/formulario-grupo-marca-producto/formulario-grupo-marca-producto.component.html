@@ -1,0 +1,24 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <!--<input class="class-input" type="text" formControlName="marca" id="marca" required><span class="barra"></span>
+        <label for="" class="formulario_label">Marca</label>-->
+        <select class="form-select class-input" formControlName="marca" id="seleccionItem" required>
+            <option selected></option>
+            <option *ngFor="let m of marcaa" [ngValue]="m.name">{{m.name}}</option>
+        </select>
+        <label for="" class="formulario_label">Seleccione una marca</label>
+    </div>
+
+    <div class="" *ngIf="marca.invalid && (marca.dirty || marca.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="marca.errors.required || marca.value==''">
+            <p class="formulario_input-error alert-danger">El campo marca es requerido</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(marca.valid==true) && (marca.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

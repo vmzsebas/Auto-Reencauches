@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="nombre" id="nombre" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Nombre</label>
+    </div>
+    <div class="" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="nombre.errors.required">
+            <p class="formulario_input-error alert-danger">El nombre es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="nombre.invalid && (nombre.dirty || nombre.touched) && nombre.errors.pattern">
+            <p class="formulario_input-error alert-danger">El nombre solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(nombre.valid==true) && (nombre.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

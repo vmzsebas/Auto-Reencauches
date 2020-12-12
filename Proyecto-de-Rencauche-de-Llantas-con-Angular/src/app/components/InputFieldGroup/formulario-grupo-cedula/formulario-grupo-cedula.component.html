@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_cedula" [formGroup]="registroForm">
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="cedula" id="cedula" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Cedula</label>
+    </div>
+    <div class="" *ngIf="cedula.invalid && (cedula.dirty || cedula.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="cedula.errors.required">
+            <p class="formulario_input-error alert-danger">La cedula es requerida.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="cedula.invalid && (cedula.dirty || cedula.touched) && cedula.errors.pattern">
+            <p class="formulario_input-error alert-danger">La cedula solo puede contener numeros de 10 digitos.
+            </p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(cedula.valid==true) && (cedula.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

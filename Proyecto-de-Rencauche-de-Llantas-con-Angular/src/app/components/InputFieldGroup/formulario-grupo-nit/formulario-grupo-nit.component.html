@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_cedula" [formGroup]="registroForm">
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="nit" id="nit" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Nit</label>
+    </div>
+    <div class="" *ngIf="nit.invalid && (nit.dirty || nit.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="nit.errors.required">
+            <p class="formulario_input-error alert-danger">El nit es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="nit.invalid && (nit.dirty || nit.touched) && nit.errors.pattern">
+            <p class="formulario_input-error alert-danger">El nit solo puede contener numeros de 10 digitos.
+            </p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(nit.valid==true) && (nit.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

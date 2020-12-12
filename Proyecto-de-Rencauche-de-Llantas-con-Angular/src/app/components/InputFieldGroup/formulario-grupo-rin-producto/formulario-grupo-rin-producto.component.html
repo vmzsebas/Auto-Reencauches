@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="rin_prod" id="rin_prod" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Rin</label>
+    </div>
+    <div class="" *ngIf="rin_prod.invalid && (rin_prod.dirty || rin_prod.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="rin_prod.errors.required">
+            <p class="formulario_input-error alert-danger">El rin del producto es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="rin_prod.invalid && (rin_prod.dirty || rin_prod.touched) && rin_prod.errors.pattern">
+            <p class="formulario_input-error alert-danger">El rin solo puede contener numeros decimales, su rango esta 1 y 15 digitos.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(rin_prod.valid==true) && (rin_prod.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

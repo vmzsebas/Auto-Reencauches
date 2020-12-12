@@ -1,0 +1,26 @@
+<div class="grupo" id="grupo_apellido" [formGroup]="registroForm">
+    <div class="formulario_grupo-input">
+            <select class="form-select class-input" formControlName="eje_prod" id="seleccionItem" required>
+                <option selected></option>
+                <option *ngFor="let e of ejes" [ngValue]="e.name">{{e.name}}</option>
+            </select>
+        <label for="" class="formulario_label">Eje</label>
+    </div>
+    <div class="" *ngIf="eje_prod.invalid && (eje_prod.dirty || eje_prod.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="eje_prod.errors.required">
+            <p class="formulario_input-error alert-danger">El eje del producto es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+        <div class="grupo-incorrecto"
+            *ngIf="eje_prod.invalid && (eje_prod.dirty || eje_prod.touched) && eje_prod.errors.pattern">
+            <p class="formulario_input-error alert-danger">El eje solo puede contener letras.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(eje_prod.valid==true) && (eje_prod.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="grupo" id="grupo_nombre" [formGroup]="registroForm">
+
+    <div class="formulario_grupo-input">
+        <input class="class-input" type="text" formControlName="perfil_prod" id="perfil_prod" required><span
+            class="barra"></span>
+        <label for="" class="formulario_label">Perfil</label>
+    </div>
+    <div class="" *ngIf="perfil_prod.invalid && (perfil_prod.dirty || perfil_prod.touched)">
+
+        <div class="grupo-incorrecto" *ngIf="perfil_prod.errors.required">
+            <p class="formulario_input-error alert-danger">El perfil del producto es requerido.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+        <div class="grupo-incorrecto"
+            *ngIf="perfil_prod.invalid && (perfil_prod.dirty || perfil_prod.touched) && perfil_prod.errors.pattern">
+            <p class="formulario_input-error alert-danger">El perfil solo puede contener numeros, su rango esta 1 y 15 digitos.</p>
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+
+    </div>
+    <div class="grupo-correcto" *ngIf="(perfil_prod.valid==true) && (perfil_prod.dirty==true)">
+        <i class="formulario_validacion-estado fas fa-check-circle"></i>
+    </div>
+
+</div>

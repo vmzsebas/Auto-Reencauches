@@ -107,6 +107,7 @@ export class FormularioRegistroProductoComponent implements OnInit {
     this.registroForm.get('descripcion_prod').reset();
     this.registroForm.get('beneficios_prod').reset();
     this.registroForm.get("logo_prod").reset();
+    this.registroForm.get("imagen_prod").reset();
     this.registroForm.get("precio_prod").reset();
     this.registroForm.get("cantidad_ex_prod").reset();
     this.registroForm.get("peso_prod").reset();

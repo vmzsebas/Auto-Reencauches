@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Producto } from 'src/app/Modelo/Producto';
 
 @Component({
   selector: 'app-tiendarow1',

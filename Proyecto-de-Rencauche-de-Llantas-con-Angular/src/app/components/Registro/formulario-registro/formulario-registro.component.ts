@@ -15,12 +15,12 @@ import { IniciarSesionService } from 'src/app/Service/IniciarSesion.service';
 export class FormularioRegistroComponent implements OnInit {
 
   usuarioPattern: any = /^[a-zA-Z0-9\_\-]{8,16}$/;
-  nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-  apellidoPattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+  nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{3,20}$/;
+  apellidoPattern: any = /^[a-zA-ZÀ-ÿ\s]{3,20}$/;
   cedulaPattern: any = /^\d{6,10}$/;
   passwordPattern: any = /^.{8,18}$/;
   correoPattern: any = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-  telefonoPattern: any = /^\d{1,10}$/;
+  telefonoPattern: any = /^\d{7,10}$/;
 
   showMessage = '';
   mensajeV = '';

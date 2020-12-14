@@ -31,13 +31,25 @@ public class ProductoService {
     public Optional<Producto> getOne(int id) {
         return productoRepository.findById(id);
     }
-    
-    public void save(Producto producto){
+
+    public void save(Producto producto) {
         productoRepository.save(producto);
     }
-    
-    public void delete(int id){
+
+    public void delete(int id) {
         productoRepository.deleteById(id);
+    }
+
+    public Producto saberProdExistente(String nombre) {
+        Producto producto = null;
+        List<Producto> listProd = list();
+        for (int i = 0; i < listProd.size(); i++) {
+            Producto prod = (Producto) listProd.get(i);
+            if (prod.getNombre_prod().equals(nombre)) {
+                producto = prod;
+            }
+        }
+        return producto;
     }
 
 }

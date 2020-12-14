@@ -16,7 +16,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -84,5 +86,15 @@ public class ProductoController {
                 productoDto.getRin_prod(), productoDto.getEje_prod(), productoDto.getTerreno_prod(), productoDto.getTipo_prod(), productoDto.getVehiculo());
         productoService.save(producto);
         return new ResponseEntity(new Mensaje("El registro se ha realizado con exito"), HttpStatus.OK);
+    }
+    
+    @PutMapping("/actualizar-cantidad-producto/{cantidad}/{nombre}")
+    public ResponseEntity<?> update_existProd(@PathVariable("cantidad") int cantidad, @PathVariable("nombre") String nombre){
+        
+        Producto producto = productoService.saberProdExistente(nombre);
+        producto.setCantidad_ex_prod(cantidad);
+        productoService.save(producto);
+        
+        return new ResponseEntity(new Mensaje("Se han actualizado los campos correctamente"), HttpStatus.OK);
     }
 }

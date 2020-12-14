@@ -2,30 +2,62 @@
     <div class="card-body">
 
         <aside>
-            <img rol="presentacion" class="imagen_descrip"
-                src={{producto}}>
+            <img rol="presentacion" class="imagen_descrip" src={{producto}}>
         </aside>
         <section class="section">
             <article>
                 <div class="row text-center">
                     <div class="col-xs-12 col-sd-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="div-descripcion">
-                            <img class="card-img-steelmark1"
-                                src={{logo}}><br><br>
+                            <img class="card-img-steelmark1" src={{logo}}><br><br>
                             <span class="span2">{{nombre}}</span><br>
                             <span class="span3">{{ancho}}{{perfil}}{{rin}}</span><br><br><br>
                             <p>Llanta radial direccional con capacidad para toda posición y uso en carretera.</p>
                             <br>
                             <div class="precio-unidad">
                                 <span class="unity-price">Precio unidad</span><br>
-                                <span class="unity-price1">{{precio}}</span><br>
+                                <span class="unity-price1">{{precioCad}}</span><br>
                             </div>
                             <br>
-                            <input class="class-input-descripcion text-center" type="number" id="telefono" required
-                                value="1">
-                            <button class="class-button-agregar-carrito" type="submit">
-                                <span _ngcontent-kck-c185="" id="idIconCarrito" aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span>
-                            </button>
+                            <form [formGroup]="registroForm" (ngSubmit)="onAgregarCarrito()">
+                                <input class="class-input-descripcion text-center" type="number"
+                                    formControlName="cantidad" id="cantidad" required value="cantidad" min="1">
+                                <button class="class-button-agregar-carrito" type="submit">
+                                    <span id="idIconCarrito" class="glyphicon glyphicon-shopping-cart"
+                                        aria-hidden="true"></span>
+                                </button>
+
+                                <div class="" *ngIf="cantidad.invalid && (cantidad.dirty || cantidad.touched)">
+
+                                    <div class="grupo-incorrecto" *ngIf="cantidad.errors.required && validarMensaje() !== 'FALSE'">
+                                        <p class="formulario_input-error-descripcion alert-danger">La cantidad es requerida.</p>
+                                        <i class="formulario_validacion-estado-descripcion fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="grupo-incorrecto"
+                                        *ngIf="cantidad.invalid && (cantidad.dirty || cantidad.touched) && cantidad.errors.pattern">
+                                        <p class="formulario_input-error-descripcion alert-danger">La cantidad debe ser mayor que
+                                            cero.
+                                        </p>
+                                        <i class="formulario_validacion-estado-descripcion fas fa-times-circle"></i>
+                                    </div>
+
+                                </div>
+                                <div class="grupo-incorrecto" *ngIf="cantidad.value === 0">
+                                    <p class="formulario_input-error-descripcion alert-danger">La cantidad debe ser mayor que
+                                        cero.
+                                    </p>
+                                    <i class="formulario_validacion-estado-descripcion fas fa-times-circle"></i>
+                                </div>
+
+                                <div class="grupo-correcto" *ngIf="(cantidad.valid==true) && (cantidad.dirty==true) && cantidad.value > 0">
+                                    <i class="formulario_validacion-estado-descripcion fas fa-check-circle"></i>
+                                </div>
+                            </form>
+                            <br>
+                            <div class="grupo formulario-mensaje" id="formulario-mensaje" *ngIf="validarMensaje() === 'FALSE' && cantidad.valid === false">
+                                <p><i class="fas fa-exclamation-triangle"></i><b> Error:</b>
+                                    {{mensajeV}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

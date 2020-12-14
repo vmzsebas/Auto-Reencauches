@@ -49,8 +49,6 @@ export class DescripcionProdComponent implements OnInit {
 
   onAgregarCarrito() {
     this.saberCantidadExistente(this.nombre);
-
-
   }
 
   validarMensaje() {

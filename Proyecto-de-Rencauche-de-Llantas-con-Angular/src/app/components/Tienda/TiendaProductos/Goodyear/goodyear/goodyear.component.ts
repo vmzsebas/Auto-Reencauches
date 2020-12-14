@@ -24,7 +24,7 @@ export class GoodyearComponent implements OnInit {
     this.perfil = 80;
     this.rin = "R22.5";
     this.producto = "../../../../../assets/img/Tienda/Imagen_productos/Goodyear/LLANTA_GOODYEAR.png";
-    this.precio = "$1.879.000";
+    this.precio = "$1879000";
   }
 
   descripcionProd() {

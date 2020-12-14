@@ -23,7 +23,7 @@ export class LaufennComponent implements OnInit {
     this.perfil = 9
     this.rin = "R17.5";
     this.producto = "../../../../../assets/img/Tienda/Imagen_productos/Laufenn/LLANTA_LAUFENN.png";
-    this.precio = "$612.000";
+    this.precio = "$612000";
   }
   descripcionProd() {
     this.router.navigate(["/descripcion-producto",this.logo,this.nombre,this.ancho,this.perfil,this.rin,this.producto,this.precio]);

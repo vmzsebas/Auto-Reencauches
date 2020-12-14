@@ -22,7 +22,7 @@ export class SteelmarkComponent implements OnInit {
     this.perfil=75;
     this.rin ="R17.5";
     this.producto="../../../../../assets/img/Tienda/Imagen_productos/Steelmark/LLANTA_STEELMARK.png"
-    this.precio="$596.000";
+    this.precio="$596000";
   }
 
   descripcionProd() {

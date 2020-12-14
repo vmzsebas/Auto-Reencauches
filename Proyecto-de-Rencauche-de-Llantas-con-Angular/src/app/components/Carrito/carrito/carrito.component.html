@@ -1,0 +1,55 @@
+<div class="card card-carrito">
+    <div class="card-body">
+
+        <aside id="aside-carrito">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="ocultar == true">
+                    <tr>
+                        <td class="text-center">
+                            <aside>
+                                <img class="card-img-steelmark2" src="{{producto}}">
+                            </aside>
+                            <section class="section">
+                                <img class="card-img-steelmark1" src={{logo}}><br>
+                                <span class="span">{{nombre}}</span><br>
+                                <span class="span1">{{ancho}}{{perfil}}{{rin}}</span>
+                            </section>
+                        </td>
+                        <td style="margin: 50px 30%;">{{precio}}</td>
+                        <td>{{cantidad}}</td>
+                        <td>{{subtotal}}</td>
+                        <td><button class="btn btn-outline-danger" (click)="desactivar()"><i class="fas fa-trash"></i>
+                                Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        <section class="section-carrito">
+            <article>
+                <div class="div-carrito">
+                    <p>Total del Carrito</p>
+                    <br>
+                    <table class="table tableTotalCarrito table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Total</th>
+                                <td *ngIf="ocultar == true">${{total}}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button class="class-button-finalizar-compra" type="submit">Finalizar Compra</button>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>
+{{ocultar}}

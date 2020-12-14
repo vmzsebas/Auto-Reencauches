@@ -8,6 +8,7 @@ import { FormularioRegistroAdministradorComponent } from './components/Administr
 import { FormularioRegistroProductoComponent } from './components/Administrador/Producto/Registro/formulario-registro-producto/formulario-registro-producto.component';
 import { ActualizarProveedoresComponent } from './components/Administrador/Proveedor/actualizar-proveedores/actualizar-proveedores.component';
 import { ListadoProveedoresComponent } from './components/Administrador/Proveedor/listado-proveedores/listado-proveedores.component';
+import { CarritoComponent } from './components/Carrito/carrito/carrito.component';
 import { ContactenosComponent } from './components/Contactenos/contactenos/contactenos.component';
 import { FormularioLoginComponent } from './components/Iniciar Sesion/formulario-login/formulario-login.component';
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'admin-formulario-registro-administrador', component: FormularioRegistroAdministradorComponent },
   { path: 'admin-formulario-registro-producto', component: FormularioRegistroProductoComponent },
   { path: 'descripcion-producto/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio', component:DescripcionProdComponent},
+  { path: 'carrito/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio/:subtotal/:cantidad', component: CarritoComponent},
   { path: '**', pathMatch: 'full', component: InicioComponent }
 ];
 

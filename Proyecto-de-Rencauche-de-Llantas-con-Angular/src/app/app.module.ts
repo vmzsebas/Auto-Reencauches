@@ -79,6 +79,7 @@ import { FormularioGrupoTipoProductoComponent } from './components/InputFieldGro
 import { FormularioGrupoVehiculoProductoComponent } from './components/InputFieldGroup/formulario-grupo-vehiculo-producto/formulario-grupo-vehiculo-producto.component';
 import { FormularioGrupoImagenProductoComponent } from './components/InputFieldGroup/formulario-grupo-imagen-producto/formulario-grupo-imagen-producto.component';
 import { DescripcionProdComponent } from './components/Tienda/Descripcion/descripcion-prod/descripcion-prod.component';
+import { CarritoComponent } from './components/Carrito/carrito/carrito.component';
 
 
 
@@ -148,7 +149,8 @@ import { DescripcionProdComponent } from './components/Tienda/Descripcion/descri
   FormularioGrupoTipoProductoComponent,
   FormularioGrupoVehiculoProductoComponent,
   FormularioGrupoImagenProductoComponent,
-  DescripcionProdComponent],
+  DescripcionProdComponent,
+  CarritoComponent],
   imports: [
     BrowserModule,
     FormsModule,

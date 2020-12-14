@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="activar != false">
     <div id="idTipoText2" style="margin-left:1.5%">
         <br>
     </div>
@@ -6,16 +6,25 @@
         <app-barra-busqueda></app-barra-busqueda>
     </aside>
     <section class="section">
+
+        <!--<ng-template *ngIf="llamarMetodos() == true">
+
+        </ng-template>-->
+
         <article>
             <app-tiendarow1></app-tiendarow1>
         </article>
         <br>
-        <article>
+        <!--<article>
             <app-tiendarow2></app-tiendarow2>
         </article>
         <br>
         <article>
             <app-tiendarow3></app-tiendarow3>
-        </article>
+        </article>-->
     </section>
+</div>
+
+<div *ngIf="activar == false">
+    <app-descripcion-prod></app-descripcion-prod>
 </div>

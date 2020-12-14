@@ -13,6 +13,7 @@ import { FormularioLoginComponent } from './components/Iniciar Sesion/formulario
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FormularioRegistroProveedorComponent } from './components/Proveedor/formulario-registro-proveedor/formulario-registro-proveedor.component';
 import { FormularioRegistroComponent } from './components/Registro/formulario-registro/formulario-registro.component';
+import { DescripcionProdComponent } from './components/Tienda/Descripcion/descripcion-prod/descripcion-prod.component';
 
 import { TiendaComponent } from './components/Tienda/tienda/tienda.component';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'admin-formulario-registro-proveedor', component: FormularioRegistroProveedorComponent },
   { path: 'admin-formulario-registro-administrador', component: FormularioRegistroAdministradorComponent },
   { path: 'admin-formulario-registro-producto', component: FormularioRegistroProductoComponent },
+  { path: 'descripcion-producto/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio', component:DescripcionProdComponent},
   { path: '**', pathMatch: 'full', component: InicioComponent }
 ];
 

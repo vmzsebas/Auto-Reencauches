@@ -10,6 +10,7 @@ export class FormularioGrupoPefilProductoComponent implements OnInit {
 
 @Input() registroForm:FormGroup;
 @Input() perfil_prod:FormControl;
+
   constructor() { }
 
   ngOnInit(): void {

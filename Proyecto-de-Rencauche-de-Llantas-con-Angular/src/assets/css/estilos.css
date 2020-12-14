@@ -130,6 +130,18 @@ td {
     border-bottom: 2px solid var(--colorTextos);
 }
 
+.class-input-descripcion {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 0% 5%;
+    width: 100px;
+    height: 52px;
+    border: groove;
+    border-bottom: 2px solid var(--colorTextos);
+}
+
 .class-input-logo {
     background: none;
     color: #c6c6c6;
@@ -176,7 +188,7 @@ td {
     margin: 5px !important;
 }
 
-.class-input:focus, .class-input-buscar:focus {
+.class-input:focus, .class-input-buscar:focus, .class-input-descripcion {
     outline: none;
     color: #5e5d5d;
 }
@@ -208,7 +220,8 @@ td {
     font-size: 12px;
     color: #2196f3;
 }
-.class-input-logo:focus~label,.class-input-logo:valid~label{
+
+.class-input-logo:focus~label, .class-input-logo:valid~label {
     font-size: 12px;
     color: #2196f3;
 }
@@ -268,6 +281,20 @@ td {
     height: 45px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.class-button-agregar-carrito {
+    font-family: 'roboto';
+    color: #fff;
+    border-radius: 20rem;
+    background-color: rgba(95, 138, 180);
+    margin: 10% 10%;
+    width: 50%;
+    height: 50px;
+    margin: 10px auto;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
 }
 
 .formulario_input-error {
@@ -696,10 +723,37 @@ td {
     text-align: center;
 }
 
+.imagen_descrip {
+    width: 37vw;
+}
+
+.imagen_d {
+    background-color: greenyellow;
+    width: 400px;
+    height: 400px;
+}
+
+.div-descripcion {
+    width: 55%;
+    height: auto;
+    margin: 3% 29%;
+}
+
+.div-descripcion p {
+    margin: 2%;
+    text-align: justify;
+}
+
 .card-img-steelmark {
     height: auto;
     width: 7.5vw;
     margin: 20px;
+}
+
+.card-img-steelmark1 {
+    width: 11vw;
+    margin: 20px;
+    text-align: center;
 }
 
 .card-img-goodyear {
@@ -737,6 +791,20 @@ td {
     font-family: 'Geogrotesque-Rg';
     font-weight: 600;
     font-size: 1.1vw;
+    color: #113F6D;
+}
+
+.span2 {
+    font-family: 'Geogrotesque-SmBd';
+    font-weight: 600;
+    font-size: 3vw;
+    color: #0E2B4C !important;
+}
+
+.span3 {
+    font-family: 'Geogrotesque-Rg';
+    font-weight: 600;
+    font-size: 2.1vw;
     color: #113F6D;
 }
 

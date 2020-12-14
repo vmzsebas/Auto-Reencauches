@@ -1,14 +1,14 @@
-<div class="grupo card">
+<div class="grupo card" [routerLink]="" (click)="descripcionProd()">
     <div class="marca-producto-steelmark">
-        <img class="card-img-steelmark" src="../../../../../assets/img/Tienda/Logos/STEELMARK.png"
+        <img class="card-img-steelmark" src="{{logo}}"
             alt="Card image cap"><br>
-        <span class="span">AHS</span><br>
-        <span class="span1">215/75R17.5</span>
+        <span class="span">{{nombre}}</span><br>
+        <span class="span1">{{ancho}}{{perfil}}{{rin}}</span>
     </div>
-    <img class="card-img-top" src="../../../../../assets/img/Tienda/Imagen_productos/Steelmark/LLANTA_STEELMARK.png" alt="Card image cap">
+    <img class="card-img-top" src={{producto}} alt="Card image cap">
     <br>
     <div class="precio-unidad">
         <span class="unity-price">Precio unidad</span><br>
-        <span class="unity-price1">$596.000</span><br>
+        <span class="unity-price1">{{precio}}</span><br>
     </div>
 </div>

@@ -11,23 +11,23 @@ export class MenuComponent implements OnInit {
   @Input() Vmain;
   
   inicio(){
-    this.router.navigate(["inicio"]);
+    this.router.navigate(["/inicio"]);
   }
   tienda(){
-    this.router.navigate(["tienda"]);
+    this.router.navigate(["/tienda"]);
   }
   aboutUs(){
-    this.router.navigate(["acerca-de-nosotros"]);
+    this.router.navigate(["/acerca-de-nosotros"]);
   }
   contactenos(){
-    this.router.navigate(["contactenos"]);
+    this.router.navigate(["/contactenos"]);
   }
 
   formRegistrar(){
-    this.router.navigate(["formulario-registro"]);
+    this.router.navigate(["/formulario-registro"]);
   }
   formLogin(){
-    this.router.navigate(["formulario-login"]);
+    this.router.navigate(["/formulario-login"]);
   }
 
   constructor(private router:Router) { }

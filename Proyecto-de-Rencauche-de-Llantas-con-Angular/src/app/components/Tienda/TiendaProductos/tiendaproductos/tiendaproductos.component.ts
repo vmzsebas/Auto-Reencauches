@@ -9,10 +9,40 @@ import { ProductoService } from 'src/app/Service/Producto.service';
 })
 export class TiendaproductosComponent implements OnInit {
 
+  activar: boolean = true;
+  constructor(private productoService: ProductoService) { }
+  productos: Producto[] = null;
+  cantidadProductos: number = 0;
+  cantidadFilas() {
 
-  constructor() { }
+    return false;
+  }
+
+  cargarProductos(): void {
+    this.productoService.listar_productos().subscribe(
+      data => {
+        this.productos = data;
+        this.cantidadProductos = (this.productos.length / 3);
+        if (this.cantidadProductos - (Math.floor(this.cantidadProductos)) != 0) {
+          this.cantidadProductos = (Math.trunc(this.cantidadProductos)) + 1;
+        }
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
+
+  llamarMetodos() {
+    console.log("Vamos aver: ");
+    return true;
+  }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
+    this.cargarProductos();
   }
 
 }

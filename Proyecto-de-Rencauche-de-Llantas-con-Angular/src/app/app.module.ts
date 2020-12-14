@@ -78,6 +78,8 @@ import { FormularioGrupoTerrenoProductoComponent } from './components/InputField
 import { FormularioGrupoTipoProductoComponent } from './components/InputFieldGroup/formulario-grupo-tipo-producto/formulario-grupo-tipo-producto.component';
 import { FormularioGrupoVehiculoProductoComponent } from './components/InputFieldGroup/formulario-grupo-vehiculo-producto/formulario-grupo-vehiculo-producto.component';
 import { FormularioGrupoImagenProductoComponent } from './components/InputFieldGroup/formulario-grupo-imagen-producto/formulario-grupo-imagen-producto.component';
+import { DescripcionProdComponent } from './components/Tienda/Descripcion/descripcion-prod/descripcion-prod.component';
+
 
 
 @NgModule({
@@ -145,7 +147,8 @@ import { FormularioGrupoImagenProductoComponent } from './components/InputFieldG
   FormularioGrupoTerrenoProductoComponent,
   FormularioGrupoTipoProductoComponent,
   FormularioGrupoVehiculoProductoComponent,
-  FormularioGrupoImagenProductoComponent],
+  FormularioGrupoImagenProductoComponent,
+  DescripcionProdComponent],
   imports: [
     BrowserModule,
     FormsModule,

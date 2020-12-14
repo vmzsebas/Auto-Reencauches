@@ -8,9 +8,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FormularioGrupoPesoUnidadProductoComponent implements OnInit {
 
-  @Input() registroForm:FormGroup;
-
-  @Input() peso_unidad:FormControl;
+  @Input() registroForm: FormGroup;
+  @Input() peso_unidad: FormControl;
+  
   constructor() { }
 
   ngOnInit(): void {

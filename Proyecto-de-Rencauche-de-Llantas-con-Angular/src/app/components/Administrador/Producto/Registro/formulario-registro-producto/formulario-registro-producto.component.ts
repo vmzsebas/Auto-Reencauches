@@ -12,15 +12,9 @@ import { ProductoService } from 'src/app/Service/Producto.service';
 })
 export class FormularioRegistroProductoComponent implements OnInit {
 
-  usuarioPattern: any = /^[a-zA-Z0-9\_\-]{8,16}$/;
   nombrePattern: any = /^[a-zA-Z0-9À-ÿ\s]{1,40}$/;
   descripcion_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,800}$/;
   beneficios_prodPattern: any = /^[a-zA-ZÀ-ÿ.,\s]{10,800}$/;
-  apellidoPattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-  cedulaPattern: any = /^\d{1,10}$/;
-  passwordPattern: any = /^.{8,18}$/;
-  correoPattern: any = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-  telefonoPattern: any = /^\d{1,10}$/;
   precio_prodPattern: any = /^\d{1,15}$/;
   cantidad_ex_prodPattern: any = /^\d{1,15}$/;
   peso_prodPattern: any = /^\d{1,15}$/;

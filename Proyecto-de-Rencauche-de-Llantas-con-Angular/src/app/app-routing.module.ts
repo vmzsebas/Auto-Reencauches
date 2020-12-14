@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'admin-formulario-registro-administrador', component: FormularioRegistroAdministradorComponent },
   { path: 'admin-formulario-registro-producto', component: FormularioRegistroProductoComponent },
   { path: 'descripcion-producto/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio', component:DescripcionProdComponent},
-  { path: 'carrito/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio/:subtotal/:cantidad', component: CarritoComponent},
+  { path: 'carrito/:logo/:nombre/:ancho/:perfil/:rin/:producto/:precio/:subtotal/:cantidad/:cantidadRest', component: CarritoComponent},
   { path: '**', pathMatch: 'full', component: InicioComponent }
 ];
 

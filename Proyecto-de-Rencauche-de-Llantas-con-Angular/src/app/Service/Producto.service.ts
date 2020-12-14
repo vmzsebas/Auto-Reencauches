@@ -12,11 +12,15 @@ export class ProductoService {
 
   productoURL = 'http://localhost:8080/formulario-admin-producto/';
 
-  public listar_productos(): Observable<Producto[]>{
+  public listar_productos(): Observable<Producto[]> {
     return this.httpClient.get<Producto[]>(this.productoURL + "listar-producto");
   }
 
-  public crear_producto(producto:Producto): Observable<any>{
-    return this.httpClient.post<any>(this.productoURL + 'crear-producto',producto)
+  public crear_producto(producto: Producto): Observable<any> {
+    return this.httpClient.post<any>(this.productoURL + 'crear-producto', producto)
+  }
+
+  public actualizar_cantidad_prod(cantidad: number, nombre: string): Observable<any> {
+    return this.httpClient.put<any>(this.productoURL + `actualizar-cantidad-producto/${cantidad}/${nombre}`, null);
   }
 }

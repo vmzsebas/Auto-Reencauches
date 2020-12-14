@@ -65,11 +65,11 @@ export class DescripcionProdComponent implements OnInit {
           if (nombre == element.nombre_prod) {
             if (this.cantidad != null) {
               this.cantidadAux = element.cantidad_ex_prod - this.cantidad.value;
-              if (this.cantidadAux >= 0 && this.registroForm.valid && this.cantidad.value >0) {
+              if (this.cantidadAux >= 0 && this.registroForm.valid && this.cantidad.value > 0) {
                 this.cantidadVerd = true;
                 this.precio = parseInt((this.precioCad.split("$")[1]), 10);
                 this.subtotal = this.precio * this.cantidad.value;
-                this.router.navigate(["/carrito/", this.logo, this.nombre, this.ancho, this.perfil, this.rin, this.producto, this.precioCad, this.subtotal, this.cantidad.value]);
+                this.router.navigate(["/carrito/", this.logo, this.nombre, this.ancho, this.perfil, this.rin, this.producto, this.precioCad, this.subtotal, this.cantidad.value, this.cantidadAux]);
               } else {
                 this.mensajeV = 'Por favor llenar la cantidad correctamente.';
                 this.showMessage = 'FALSE'
@@ -87,7 +87,7 @@ export class DescripcionProdComponent implements OnInit {
                 timeOut: 2100,
                 positionClass: 'toast-top-center'
               });
-              this.cantidadVerd=false;
+              this.cantidadVerd = false;
             }
             break;
           }

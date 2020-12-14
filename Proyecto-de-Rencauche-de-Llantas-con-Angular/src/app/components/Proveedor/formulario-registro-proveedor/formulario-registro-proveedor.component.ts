@@ -13,9 +13,9 @@ import { ProveedorService } from 'src/app/Service/Proveedor.service';
 export class FormularioRegistroProveedorComponent implements OnInit {
 
   nitPattern: any = /^[0-9\-]{4,10}$/;
-  nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-  telefonoPattern: any = /^\d{1,10}$/;
-  direccionPattern: any =/^[a-zA-Z0-9À-ÿ\s\-]{1,100}$/;
+  nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{3,20}$/;
+  telefonoPattern: any = /^\d{7,10}$/;
+  direccionPattern: any =/^[a-zA-Z0-9À-ÿ\s\-]{4,100}$/;
 
   showMessage = '';
   mensajeV = '';
